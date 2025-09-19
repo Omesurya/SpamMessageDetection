@@ -1,0 +1,101 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Center container */
+.container {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 420px;  /* stays small on big screens */
+    text-align: center;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease-in-out;
+    box-sizing: border-box;
+}
+
+/* Title */
+.container h1 {
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 22px;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0px 0px 8px rgba(102, 126, 234, 0.5);
+}
+
+/* Button */
+button {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    transform: scale(1.03);
+    background: linear-gradient(90deg, #5a67d8, #6b46c1);
+}
+
+/* Prediction result */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    display: inline-block;
+    animation: fadeIn 0.8s ease-in-out;
+    word-wrap: break-word;
+}
+
+/* Result color changes */
+#result.spam {
+    background: #ffe0e0;
+    color: #d93025;
+    border: 1px solid #d93025;
+}
+
+#result.ham {
+    background: #e6ffe6;
+    color: #1e7d32;
+    border: 1px solid #1e7d32;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
